@@ -1,5 +1,5 @@
 
-LAST EDIT 28/11/2013
+LAST EDIT 29/11/2013
 CallerPy v0.2 - TODO
 
 Defintion:
@@ -17,6 +17,6 @@ TODO
 [IMP]	Automated Name|Number Crawler
 [ASTH]	View xml.log in web browser * Will handle encoding
 [IMP]	Show all possible names
-[IMPV]	Add API feature; ability to utilise CallerPy from other applications
 [IMP]	Define function to handle arguments
+[IMP]   Add xml parsing
  
