@@ -5,8 +5,10 @@ Truecaller Name Retriever.
 Since my request for the API was rejected, I commenced using python parsing libraries.  
 Callerpy emulates the process one would encounter if using a web-browser.
 
-**NEW FEATURE**  
-search by country code
+***
+**NEW FEATURE**
+Strangely enough, it is not possible to physically enter the country code in www.truecaller.com although defined in www.truecaller.com/javascripts/app.min.1385646302.js  
+However, it is possible to do so using callerpy.  
 
 ***
 TODO
@@ -27,7 +29,7 @@ Defintion:
 2. [IMP]	Automated Name|Number Crawler  
 3. [ASTH]	View in Map * Will handle encoding  
 4. [IMP]	Show all possible names  
-5. [IMPV]	Add API feature; ability to utilise CallerPy from other applications  
+~~5. [IMPV]	Add API feature; ability to utilise CallerPy from other applications~~  
 6. [IMP]	Define function to handle arguments
 7. [IMP]    Add xml parsing
 ```
@@ -58,12 +60,12 @@ Do not forget to hardcode your credentials
 ***
 **RUN**
 ```
-python callerpypy -n 7349303030 -c us -l twitter  
+python callerpy.py -n 7349303030 -c us -l twitter  
 ```
 ***
 *OR*
 ```
-python callerpypy -n 7349303030 -c 1 -l twitter
+python callerpy.py -n 7349303030 -c 1 -l twitter
 ```
 ***
 **OUTPUT**
