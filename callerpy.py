@@ -79,7 +79,7 @@ class CallerPy():
 			<entry>
 				<name>%s</name>
 				<number>%s</number>
-				<counrty>%s</country>
+				<country>%s</country>
 			</entry>
 		''' %(name, number, country)
 		xml = open('log.xml', 'a')
