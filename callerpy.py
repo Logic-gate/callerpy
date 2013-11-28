@@ -71,7 +71,7 @@ class CallerPy():
 				nm = re.split(r'<.*?>', str(name))
 				for i in nm:
 					print i
-		self.save(nm[1], country, number)
+			self.save(nm[1], country, number)
 
 
 	def save(self, name, country, number):
@@ -95,7 +95,6 @@ class CallerPy():
 			if str(code) in e:
 				return i
 
-
 if __name__ == '__main__':
 	par = argparse.ArgumentParser(prog=__file__, formatter_class=argparse.ArgumentDefaultsHelpFormatter, 
 		epilog="Do not forget to hardcode your credentials", description='TrueCaller Name Retriever')
@@ -116,7 +115,21 @@ if __name__ == '__main__':
 	if argvs.country is None:
 		if argvs.login == 'twitter':
 			print 'Using Twitter'
-			x.twitter(user, pwd), x.truecaller(x.country_by_code(argvs.countrycode), argvs.number)
+			try:
+				if '54' in str(argvs.countrycode):
+					country = 'argentina-buenosaires'
+					x.twitter(user, pwd), x.truecaller(country, argvs.number)
+				if '245' in str(argvs.countrycode):
+					country = 'guinea-bissau'
+					x.twitter(user, pwd), x.truecaller(country, argvs.number)
+				if '91' in str(argvs.countrycode):
+					country = 'india-other'
+					x.twitter(user, pwd), x.truecaller(country, argvs.number)
+				else:
+					x.twitter(user, pwd), x.truecaller(x.country_by_code(argvs.countrycode), argvs.number)
+			except:
+				print 'Could Not Find a Name for %s' %argvs.number
+				
 		else:
 			print 'This version only supports twitter'
 	if argvs.countrycode is None:
