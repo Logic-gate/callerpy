@@ -1,9 +1,12 @@
 callerpy
 ========
 
-Truecaller Name Retriever.
+Truecaller Name Retriever.  
 Since my request for the API was rejected, I commenced using python parsing libraries.  
-Callerpy emulates the process one would encounter if using a web-browser. 
+Callerpy emulates the process one would encounter if using a web-browser.
+
+**NEW FEATURE**  
+search by country code
 
 ***
 TODO
