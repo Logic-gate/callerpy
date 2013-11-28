@@ -6,7 +6,7 @@ Since my request for the API was rejected, I commenced using python parsing libr
 Callerpy emulates the process one would encounter if using a web-browser.
 
 ***
-**NEW FEATURE**
+**NEW FEATURE**  
 Strangely enough, it is not possible to physically enter the country code in www.truecaller.com although defined in www.truecaller.com/javascripts/app.min.1385646302.js  
 However, it is possible to do so using callerpy.  
 
@@ -29,9 +29,8 @@ Defintion:
 2. [IMP]	Automated Name|Number Crawler  
 3. [ASTH]	View in Map * Will handle encoding  
 4. [IMP]	Show all possible names  
-~~5. [IMPV]	Add API feature; ability to utilise CallerPy from other applications~~  
-6. [IMP]	Define function to handle arguments
-7. [IMP]    Add xml parsing
+5. [IMP]	Define function to handle arguments
+6. [IMP]    Add xml parsing
 ```
 ***
 How To
