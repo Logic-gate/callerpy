@@ -1,0 +1,22 @@
+
+LAST EDIT 28/11/2013
+CallerPy v0.2 - TODO
+
+Defintion:
+		
+[IMP]	Important Changes
+[ASTH]	Aesthetic Implementations
+[FIX]	Fixes to Currant Version
+[IMPV]	Improvments
+
+-----------------------------------------
+
+TODO
+
+[IMPV]	More Login Methods--Facebook, G+, Linkedin
+[IMP]	Automated Name|Number Crawler
+[ASTH]	View xml.log in web browser * Will handle encoding
+[IMP]	Show all possible names
+[IMPV]	Add API feature; ability to utilise CallerPy from other applications
+[IMP]	Define function to handle arguments
+ 
