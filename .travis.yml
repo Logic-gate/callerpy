@@ -3,6 +3,6 @@ python:
   - "2.6"
   - "2.7"
 # command to run tests
-script: 
-- python callerpy.py -h
+script: nosetests
+
 
