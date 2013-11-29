@@ -1,5 +1,6 @@
 callerpy
 ========
+[![Build Status](https://travis-ci.org/Logic-gate/callerpy.png?branch=master)](https://travis-ci.org/Logic-gate/callerpy)  
 
 Truecaller Name Retriever.  
 Since my request for the API was rejected, I commenced using python parsing libraries.  
