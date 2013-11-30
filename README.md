@@ -65,7 +65,7 @@ python callerpy.py -n 7349303030 -c us -l twitter
 ***
 *OR*
 ```
-python callerpy.py -n 7349303030 -c 1 -l twitter
+python callerpy.py -n 7349303030 -cc 1 -l twitter
 ```
 ***
 **OUTPUT**
