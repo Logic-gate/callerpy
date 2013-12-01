@@ -37,8 +37,8 @@ import sys
 
 
 #####CREDS_twitter#####
-user = ' '
-pwd = ' '
+user = ''
+pwd = ''
 
 class CallerPy():
 
