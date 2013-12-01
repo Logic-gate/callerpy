@@ -1,5 +1,5 @@
 
-LAST EDIT 29/11/2013
+LAST EDIT 2/12/2013
 CallerPy v0.2 - TODO
 
 Defintion:
@@ -18,5 +18,5 @@ TODO
 [ASTH]	View xml.log in web browser * Will handle encoding
 [IMP]	Show all possible names
 [IMP]	Define function to handle arguments
-[IMP]   Add xml parsing
+
  

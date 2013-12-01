@@ -33,11 +33,12 @@ from bs4 import BeautifulSoup
 import re
 import datetime
 import argparse
+import sys
 
 
 #####CREDS_twitter#####
-user = ''
-pwd = ''
+user = ' '
+pwd = ' '
 
 class CallerPy():
 
@@ -75,16 +76,16 @@ class CallerPy():
 
 
 	def save(self, name, country, number):
-		template = '''
-			<entry>
-				<name>%s</name>
-				<number>%s</number>
-				<country>%s</country>
-			</entry>
-		''' %(name, number, country)
-		xml = open('log.xml', 'a')
-		xml.write(template)
-		xml.close()
+		template = '''{
+name::%s
+number::%s
+country::%s
+}
+''' %(name, number, country)
+		log = open('log', 'a')
+		log.write(template)
+		log.close()
+		
 
 	def country_by_code(self, code):
 		a = open('countries', 'r')
@@ -95,6 +96,16 @@ class CallerPy():
 			if str(code) in e:
 				return i
 
+	def history(self):
+		a = open('log', 'r').read()
+		names = re.findall(r"name::(.*)", a)
+		numbers = re.findall(r"number::(.*)", a)
+		countries = re.findall(r"country::(.*)", a)
+		
+		for name, number, country in zip(names, numbers, countries):
+			print name, '--', number, '--',  country
+		
+
 if __name__ == '__main__':
 	par = argparse.ArgumentParser(prog=__file__, formatter_class=argparse.ArgumentDefaultsHelpFormatter, 
 		epilog="Do not forget to hardcode your credentials", description='TrueCaller Name Retriever')
@@ -102,14 +113,22 @@ if __name__ == '__main__':
 	par.add_argument('-c', '--country',required=False,  help="Country | String", metavar='country')
 	par.add_argument('-cc', '--countrycode',required=False,  help="Country | Int", metavar='country code', type=int)
 	par.add_argument('-l', '--login', required=True, default='twitter', help="Login Method | twitter, g+, fb", metavar='login')
-
-	argvs = par.parse_args()
-
-	current_date = datetime.datetime.now()
-	
+	#par.add_argument('-history', required=False, help="show history", metavar='history')
 	B = mechanize.Browser()
 	B.set_handle_robots(False)
 	x = CallerPy()
+	
+	
+	if len(sys.argv) == 1:
+		x.history()
+		sys.exit(0)
+
+	argvs = par.parse_args()
+
+		
+	current_date = datetime.datetime.now()
+	
+	
 	
 	'''TODO:Define function to handle arguments'''
 	if argvs.country is None:

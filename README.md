@@ -15,13 +15,13 @@ However, it is possible to do so using callerpy.
 TODO
 --------
 ***
-LAST EDIT 28/11/2013
+LAST EDIT 2/12/2013
 ```  
 CallerPy v0.2 - TODO
   
 Defintion: 
 
-* [IMP]	    Important Changes 
+* [IMP]     Important Changes 
 * [ASTH]	Aesthetic Implementations  
 * [FIX]	    Fixes to Currant Version  
 * [IMPV]	Improvments
@@ -31,7 +31,6 @@ Defintion:
 3. [ASTH]	View in Map * Will handle encoding  
 4. [IMP]	Show all possible names  
 5. [IMP]	Define function to handle arguments
-6. [IMP]    Add xml parsing
 ```
 ***
 How To
@@ -70,34 +69,25 @@ python callerpy.py -n 7349303030 -cc 1 -l twitter
 ***
 **OUTPUT**
 ```
-            <entry>
-    			<name>Dominos Pizzay Quejas</name>
-				<number>7349303030</number>
-				<country>us</country>
-			</entry>
-		
-			<entry>
-				<name>Pizza Hut Delivery</name>
-				<number>08447700669</number>
-				<country>uk</country>
-			</entry>
+            {
+name::Dominos Pizzay Quejas
+number::7349303030
+country::us
+}
+{
+name::Pizza Hut Delivery
+number::08447700669
+country::uk
+}
 
 ```
-*Note*: you should enclose the xml by adding a tag
+*Note*: this is an update to the former, or rather the latter method which used the XML format  
+  
+To view the log: *note the lack of arguments*
 ```
-<something>
-            <entry>
-        		<name>Dominos Pizzay Quejas</name>
-				<number>7349303030</number>
-				<country>us</country>
-			</entry>
-		
-			<entry>
-				<name>Pizza Hut Delivery</name>
-				<number>08447700669</number>
-				<country>uk</country>
-			</entry>
-</something>
+python callerpy.py
+Dominos Pizzay Quejas -- 7349303030 -- us
+Pizza Hut Delivery -- 08447700669 -- uk
 ```
 
 
