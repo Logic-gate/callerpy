@@ -34,11 +34,9 @@ import re
 import datetime
 import argparse
 import sys
+import ConfigParser
 
 
-#####CREDS_twitter#####
-user = ''
-pwd = ''
 
 class CallerPy():
 
@@ -125,16 +123,22 @@ if __name__ == '__main__':
 
 	argvs = par.parse_args()
 
-		
 	current_date = datetime.datetime.now()
 	
-	
+	def login_creds(param):
+		config = ConfigParser.ConfigParser()
+		config.read('callerpy.ini')
+		user= config.get(param, 'username')
+		pwd= config.get(param, "password")	
+		return user, pwd
 	
 	'''TODO:Define function to handle arguments'''
 	if argvs.country is None:
 		if argvs.login == 'twitter':
 			print 'Using Twitter'
 			try:
+				user = login_creds("CREDS-TWITTER")[0]
+				pwd = login_creds("CREDS-TWITTER")[1]
 				if '54' in str(argvs.countrycode):
 					country = 'argentina-buenosaires'
 					x.twitter(user, pwd), x.truecaller(country, argvs.number)
@@ -154,6 +158,8 @@ if __name__ == '__main__':
 	if argvs.countrycode is None:
 		if argvs.login == 'twitter':
 			print 'Using Twitter'
+			user = login_creds("CREDS-TWITTER")[0]
+			pwd = login_creds("CREDS-TWITTER")[1]
 			x.twitter(user, pwd), x.truecaller(argvs.country, argvs.number)
 		else:
 			print 'This version only supports twitter'
