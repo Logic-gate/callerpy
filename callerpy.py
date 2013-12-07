@@ -36,8 +36,6 @@ import argparse
 import sys
 import ConfigParser
 
-
-
 class CallerPy():
 
 	def authenticate(self):
@@ -110,7 +108,7 @@ if __name__ == '__main__':
 	par.add_argument('-n', '--number', required=True, help="Phone Number Without Country Code", metavar='number')
 	par.add_argument('-c', '--country',required=False,  help="Country | String", metavar='country')
 	par.add_argument('-cc', '--countrycode',required=False,  help="Country | Int", metavar='country code', type=int)
-	par.add_argument('-l', '--login', required=True, default='twitter', help="Login Method | twitter, g+, fb", metavar='login')
+	par.add_argument('-l', '--login', required=True, help="Login Method | twitter, g+, fb", metavar='login')
 	#par.add_argument('-history', required=False, help="show history", metavar='history')
 	B = mechanize.Browser()
 	B.set_handle_robots(False)
