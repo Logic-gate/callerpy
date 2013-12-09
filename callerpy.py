@@ -35,6 +35,7 @@ import datetime
 import argparse
 import sys
 import ConfigParser
+import time
 
 class CallerPy():
 
@@ -100,21 +101,64 @@ country::%s
 		
 		for name, number, country in zip(names, numbers, countries):
 			print name, '--', number, '--',  country
+
+	def login_creds(self, param):
+		config = ConfigParser.ConfigParser()
+		config.read('callerpy.ini')
+		user= config.get(param, 'username')
+		pwd= config.get(param, "password")	
+		return user, pwd
 		
 
 if __name__ == '__main__':
+
 	par = argparse.ArgumentParser(prog=__file__, formatter_class=argparse.ArgumentDefaultsHelpFormatter, 
 		epilog="Do not forget to hardcode your credentials", description='TrueCaller Name Retriever')
-	par.add_argument('-n', '--number', required=True, help="Phone Number Without Country Code", metavar='number')
+	par.add_argument('-n', '--number', required=False, help="Phone Number Without Country Code", metavar='number')
 	par.add_argument('-c', '--country',required=False,  help="Country | String", metavar='country')
 	par.add_argument('-cc', '--countrycode',required=False,  help="Country | Int", metavar='country code', type=int)
 	par.add_argument('-l', '--login', required=True, help="Login Method | twitter, g+, fb", metavar='login')
-	#par.add_argument('-history', required=False, help="show history", metavar='history')
+	par.add_argument('-crawl', required=False, type=int, help="Automated Crawler | time int", metavar='')
 	B = mechanize.Browser()
 	B.set_handle_robots(False)
 	x = CallerPy()
 	
-	
+	def crawl(tm):
+		user = x.login_creds("CREDS-TWITTER")[0]
+		pwd = x.login_creds("CREDS-TWITTER")[1]
+		try:
+			print 'Logging in...'
+			x.twitter(user, pwd)
+		except:
+			print 'Could not login'
+			sys.exit(0)
+		crawlOpen= open('num.list', 'r')
+		crawlRead = crawlOpen.read()
+		crawlOpen.close()
+		#understand num.list
+		sp = crawlRead.split()
+		for num in sp:
+			print 'Initiating...'
+			time.sleep(tm)
+   			f = re.split(';(.*)', num)
+   			print 'Country Code::%s' %f[0]
+   			print 'Number::%s' %f[1]
+   			try:
+	   			if '54' in str(f[0]):
+					country = 'argentina-buenosaires'
+					x.twitter(user, pwd), x.truecaller(country, str(f[1]))
+				if '245' in str(f[0]):
+					country = 'guinea-bissau'
+					x.twitter(user, pwd), x.truecaller(country, str(f[1]))
+				if '91' in str(f[0]):
+					country = 'india-other'
+					x.twitter(user, pwd), x.truecaller(country, str(f[1]))
+				else:
+					print 'Attempting...'
+					x.truecaller(x.country_by_code(str(f[0])), str(f[1]))
+			except:
+				print 'Oops..Something went wrong'
+
 	if len(sys.argv) == 1:
 		x.history()
 		sys.exit(0)
@@ -122,21 +166,19 @@ if __name__ == '__main__':
 	argvs = par.parse_args()
 
 	current_date = datetime.datetime.now()
-	
-	def login_creds(param):
-		config = ConfigParser.ConfigParser()
-		config.read('callerpy.ini')
-		user= config.get(param, 'username')
-		pwd= config.get(param, "password")	
-		return user, pwd
+
+	if argvs.crawl is not None:
+		crawl(int(argvs.crawl))
+		sys.exit(0)
 	
 	'''TODO:Define function to handle arguments'''
+
 	if argvs.country is None:
 		if argvs.login == 'twitter':
 			print 'Using Twitter'
 			try:
-				user = login_creds("CREDS-TWITTER")[0]
-				pwd = login_creds("CREDS-TWITTER")[1]
+				user = x.login_creds("CREDS-TWITTER")[0]
+				pwd = x.login_creds("CREDS-TWITTER")[1]
 				if '54' in str(argvs.countrycode):
 					country = 'argentina-buenosaires'
 					x.twitter(user, pwd), x.truecaller(country, argvs.number)
@@ -156,8 +198,8 @@ if __name__ == '__main__':
 	if argvs.countrycode is None:
 		if argvs.login == 'twitter':
 			print 'Using Twitter'
-			user = login_creds("CREDS-TWITTER")[0]
-			pwd = login_creds("CREDS-TWITTER")[1]
+			user = x.login_creds("CREDS-TWITTER")[0]
+			pwd = x.login_creds("CREDS-TWITTER")[1]
 			x.twitter(user, pwd), x.truecaller(argvs.country, argvs.number)
 		else:
 			print 'This version only supports twitter'
