@@ -11,6 +11,20 @@ Callerpy emulates the process one would encounter if using a web-browser.
 Strangely enough, it is not possible to physically enter the country code in www.truecaller.com although defined in www.truecaller.com/javascripts/app.min.1385646302.js  
 However, it is possible to do so using callerpy.  
 
+**...EVEN NEWER FEATURE::THANKS TO NIRAV DESAI FOR HIS INSISTENCE :)**  
+Automated Crawler  
+```
+python callerpy.py -crawl 2 -l twitter
+```  
+The integer represents the time to wait between each request.  
+
+Write the numbers in ```num.list``` according to the following format(```CC;number```):  
+```
+1;7349303030
+1;7349303022
+```
+*Note the escape between them*
+
 ***
 TODO
 --------
@@ -22,15 +36,15 @@ CallerPy v0.2 - TODO
 Defintion: 
 
 * [IMP]     Important Changes 
-* [ASTH]	Aesthetic Implementations  
-* [FIX]	    Fixes to Currant Version  
-* [IMPV]	Improvments
+* [ASTH]    Aesthetic Implementations  
+* [FIX]     Fixes to Currant Version  
+* [IMPV]  Improvments
 -----------------------
-1. [IMPV]	More Login Methods--Facebook, G+, Linkedin  
-2. [IMP]	Automated Name|Number Crawler  
-3. [ASTH]	View in Map * Will handle encoding  
-4. [IMP]	Show all possible names  
-5. [IMP]	Define function to handle arguments
+1. [IMPV] More Login Methods--Facebook, G+, Linkedin  
+2. [IMP]  Automated Name|Number Crawler  
+3. [ASTH] View in Map * Will handle encoding  
+4. [IMP]  Show all possible names  
+5. [IMP]  Define function to handle arguments
 ```
 ***
 How To
@@ -38,8 +52,8 @@ How To
 ***
 **CMD**
 ```
-python callerpy.py -h
-usage: callerpy_v2.py [-h] -n number [-c country] [-cc country code] -l login
+usage: callerpy.py [-h] [-n number] [-c country] [-cc country code] -l login
+                   [-crawl]
 
 TrueCaller Name Retriever
 
@@ -52,9 +66,11 @@ optional arguments:
   -cc country code, --countrycode country code
                         Country | Int (default: None)
   -l login, --login login
-                        Login Method | twitter, g+, fb (default: twitter)
+                        Login Method | twitter, g+, fb (default: None)
+  -crawl                Automated Crawler | time int (default: None)
 
 Do not forget to hardcode your credentials
+
 ```
 ***
 **RUN**
