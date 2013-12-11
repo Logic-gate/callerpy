@@ -12,7 +12,8 @@ Strangely enough, it is not possible to physically enter the country code in www
 However, it is possible to do so using callerpy.  
 
 **...EVEN NEWER FEATURE::THANKS TO NIRAV DESAI FOR HIS INSISTENCE :)**  
-Automated Crawler  
+Automated Crawler
+*Truecaller has rate limit*
 ```
 python callerpy.py -crawl 2 -l twitter
 ```  
