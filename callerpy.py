@@ -152,7 +152,6 @@ if __name__ == '__main__':
 					country = 'guinea-bissau'
 					x.truecaller(country, str(f[1]))
 				if str(f[0]) == '91':
-					print 'india'
 					country = 'india-other'
 					x.truecaller(country, str(f[1]))
 				else:
