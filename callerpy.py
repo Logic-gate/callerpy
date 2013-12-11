@@ -129,6 +129,7 @@ if __name__ == '__main__':
 		try:
 			print 'Logging in...'
 			x.twitter(user, pwd)
+			pass
 		except:
 			print 'Could not login'
 			sys.exit(0)
@@ -144,15 +145,16 @@ if __name__ == '__main__':
    			print 'Country Code::%s' %f[0]
    			print 'Number::%s' %f[1]
    			try:
-	   			if '54' in str(f[0]):
+	   			if str(f[0]) == '54':
 					country = 'argentina-buenosaires'
-					x.twitter(user, pwd), x.truecaller(country, str(f[1]))
-				if '245' in str(f[0]):
+					x.truecaller(country, str(f[1]))
+				if str(f[0]) == '245':
 					country = 'guinea-bissau'
-					x.twitter(user, pwd), x.truecaller(country, str(f[1]))
-				if '91' in str(f[0]):
+					x.truecaller(country, str(f[1]))
+				if str(f[0]) == '91':
+					print 'india'
 					country = 'india-other'
-					x.twitter(user, pwd), x.truecaller(country, str(f[1]))
+					x.truecaller(country, str(f[1]))
 				else:
 					print 'Attempting...'
 					x.truecaller(x.country_by_code(str(f[0])), str(f[1]))
@@ -179,13 +181,13 @@ if __name__ == '__main__':
 			try:
 				user = x.login_creds("CREDS-TWITTER")[0]
 				pwd = x.login_creds("CREDS-TWITTER")[1]
-				if '54' in str(argvs.countrycode):
+				if str(argvs.countrycode) == '54':
 					country = 'argentina-buenosaires'
 					x.twitter(user, pwd), x.truecaller(country, argvs.number)
-				if '245' in str(argvs.countrycode):
+				if str(argvs.countrycode) == '245':
 					country = 'guinea-bissau'
 					x.twitter(user, pwd), x.truecaller(country, argvs.number)
-				if '91' in str(argvs.countrycode):
+				if str(argvs.countrycode) == '91':
 					country = 'india-other'
 					x.twitter(user, pwd), x.truecaller(country, argvs.number)
 				else:
