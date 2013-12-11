@@ -90,7 +90,7 @@ country::%s
 		p = re.findall('[a-z]{1,}', b)
 		o = re.findall('[0-9]{1,}', b)
 		for i, e in zip(p, o):
-			if str(code) in e:
+			if str(code) == str(e):
 				return i
 
 	def history(self):
