@@ -68,7 +68,8 @@ Defintion:
 <hr><p><strong>CMD</strong></p>
 
 <pre><code>python callerpy.py -h
-usage: callerpy_v2.py [-h] -n number [-c country] [-cc country code] -l login
+usage: callerpy.py [-h] [-n number] [-c country] [-cc country code] -l login
+                   [-crawl]
 
 TrueCaller Name Retriever
 
@@ -81,7 +82,8 @@ optional arguments:
   -cc country code, --countrycode country code
                         Country | Int (default: None)
   -l login, --login login
-                        Login Method | twitter, g+, fb (default: twitter)
+                        Login Method | twitter, g+, fb (default: None)
+  -crawl                Automated Crawler | time int (default: None)
 
 Do not forget to hardcode your credentials
 </code></pre>
