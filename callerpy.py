@@ -64,12 +64,12 @@ class CallerPy():
 		q = B.open('http://www.truecaller.com/search/%s/%s' %(country, number))
 		a = q.read()
 		bs = BeautifulSoup(a)
-		if '<h2 id="profile-name">' in a:
-			for name in bs.find_all('h2',{"id":"profile-name"}):
+		if '<hgroup id="result-profile-heading">' in a:
+			for name in bs.find_all('hgroup',{"id":"result-profile-heading"}):
 				nm = re.split(r'<.*?>', str(name))
 				for i in nm:
 					print i
-			self.save(nm[1], country, number)
+			self.save(nm[2], country, number)
 
 
 	def save(self, name, country, number):
