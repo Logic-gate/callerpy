@@ -4,7 +4,7 @@ callerpy
 
 **UPDATE MAY_18_2014**  
 A new RESTful online version is available @ http://callerpy.sysbase.org  
-I will port it to a CLI within a few days.
+I will port it to CLI within a few days.
 
 CURL Example:
 ```
