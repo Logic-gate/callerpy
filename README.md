@@ -2,6 +2,61 @@ callerpy
 ========
 [![Build Status](https://travis-ci.org/Logic-gate/callerpy.png?branch=master)](https://travis-ci.org/Logic-gate/callerpy)  
 
+**UPDATE MAY_18_2014**  
+A new RESTful online version is available @ http://callerpy.sysbase.org  
+I will port it to a CLI within a few days.
+
+CURL Example:
+```
+$ curl -v 'http://callerpy.sysbase.org/search/world/api/v1/REST?number=920012345&cc=966'
+
+* About to connect() to callerpy.sysbase.org port 80 (#0)
+*   Trying 54.243.121.176...
+* connected
+* Connected to callerpy.sysbase.org (54.243.121.176) port 80 (#0)
+> GET /search/world/api/v1/REST?number=920012345&cc=966 HTTP/1.1
+> User-Agent: curl/7.26.0
+> Host: callerpy.sysbase.org
+> Accept: */*
+> 
+* additional stuff not fine transfer.c:1037: 0 0
+* additional stuff not fine transfer.c:1037: 0 0
+* additional stuff not fine transfer.c:1037: 0 0
+* additional stuff not fine transfer.c:1037: 0 0
+* additional stuff not fine transfer.c:1037: 0 0
+* additional stuff not fine transfer.c:1037: 0 0
+* additional stuff not fine transfer.c:1037: 0 0
+* additional stuff not fine transfer.c:1037: 0 0
+* additional stuff not fine transfer.c:1037: 0 0
+* HTTP 1.1 or later with persistent connection, pipelining supported
+< HTTP/1.1 200 OK
+< Content-Type: application/json
+< Date: Sun, 18 May 2014 00:19:12 GMT
+< Server: gunicorn/18.0
+< Content-Length: 302
+< Connection: Keep-Alive
+< 
+{
+  "getWorld": [
+    {
+      "ADDRESS": "", 
+      "AREA": "", 
+      "COMPANY_NAME": "", 
+      "COUNTRY": "Saudi Arabia", 
+      "NAME": "Dominos Pizza", 
+      "NUMBER": "9200 12345", 
+      "STREET": "", 
+      "TWITTER_NAME": "", 
+      "TWITTER_SCREEN_NAME": "", 
+      "ZIPCODE": ""
+    }
+  ]
+* Connection #0 to host callerpy.sysbase.org left intact
+}* Closing connection #0
+
+```
+*** 
+
 Truecaller Name Retriever.  
 Since my request for the API was rejected, I commenced using python parsing libraries.  
 Callerpy emulates the process one would encounter if using a web-browser.
