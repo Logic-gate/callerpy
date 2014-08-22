@@ -1,0 +1,77 @@
+﻿{% extends "layout.html" %}
+
+{% block title %}
+CallerPy
+{% endblock %}
+{% block twitter %}
+Truecaller Name Retriever.
+{% endblock %}
+{% block content %}
+		
+	<!--start services header-->
+		<section id="services-top">
+	<!--start services-desktop header-->
+			<section id="services-top-desktop" class="visible-desktop" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="20">
+				<h1 class="header">{{stat}}</h1>
+				<p class="header">Truecaller Name Retriever!</p>
+			</section>
+	<!--start services-mobile header-->
+			<section id="services-top-mobile" class="hidden-desktop">
+				<h1 class="header">{{stat}}</h1>
+				<p class="header">Truecaller Name Retriever!</p>
+			</section>
+		</section>
+	<!--start services-->
+		<section id="services">
+			<div class="container">
+				<div class="row divide">
+					<div class="span12">
+						<ul class="thumbnails">
+							<li class="span4">
+								<div class="thumbnail" itemscope itemtype="http://schema.org/Person">
+									<a href='http://callerpy.sysbase.org/form'><i class="icon-mobile-phone"></i></a>
+									<a href='http://callerpy.sysbase.org/form'><h4>Web Form</h4></a>
+									<span></span>
+									<p>The simplest method for accessing truecaller's database is through CallerPy's online service. It does not require any form of authentication.</p>
+								</div>
+							</li>
+							<li class="span4">
+								<div class="thumbnail">
+									<a href='#'><i class="icon-cog"></i></a>
+									<a href='#'><h4>RESTful API</h4></a>
+									<span></span>
+									<p><strike>The API extends CallerPy's online service to include
+ the address, street, zipcode, area, country, company name, Twitter Name, and Twitter's screen name.</strike> The API is currently down due to excessive bandwidth charges. If you wish to see the project up and running again, please consider a donation.</p><script src="http://coinwidget.com/widget/coin.js"></script>
+<script>
+CoinWidgetCom.go({
+	wallet_address: "189vBZkLYqRrxQdBvLvspPDGhPBvAhVHqB"
+	, currency: "bitcoin"
+	, counter: "hide"
+	, alignment: "bl"
+	, qrcode: true
+	, auto_show: false
+	, lbl_button: "Donate"
+	, lbl_address: "My Bitcoin Address:"
+	, lbl_count: "donations"
+	, lbl_amount: "BTC"
+});
+</script>
+								</div>
+							</li>
+							<li class="span4">
+								<div class="thumbnail">
+									<a href="https://github.com/Logic-gate/callerpy"><i class="icon-github"></i></a>
+									<a href='https://github.com/Logic-gate/callerpy'><h4>'Git' the code</h4></a>
+									<span></span>
+									<p>CallerPy in and of itself is an open source project written in python. The source code can be found, forked, patched and pulled from GitHub.</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+	<!--start contact header-->
+		
+		{% endblock %}

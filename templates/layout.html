@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>{% block title %}
+      	{% endblock %}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Caller ID Search">
+		<meta name="author" content="Mad_Dev">
+				<link type="text/css" rel="stylesheet"
+        href="{{ url_for('static',
+              filename='css/bootstrap.min.css')}}" />
+
+        <link type="text/css" rel="stylesheet"
+        href="{{ url_for('static',
+              filename='css/bootstrap-responsive.min.css')}}" />
+
+		
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    	<![endif]-->
+
+		<link type="text/css" rel="stylesheet"
+        href="{{ url_for('static',
+              filename='css/style.css')}}" />
+
+        <link type="text/css" rel="stylesheet"
+        href="{{ url_for('static',
+              filename='css/bootstrap-lightbox.min.css')}}" />
+
+        <link type="text/css" rel="stylesheet"
+        href="{{ url_for('static',
+              filename='css/m-styles.min.css')}}" />
+
+         <link type="text/css" rel="stylesheet"
+        href="{{ url_for('static',
+              filename='css/font-awesome.min.css')}}" />
+		
+	
+		
+		<link rel="apple-touch-icon" href="http://sysbase.org/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon-precomposed" href="http://sysbase.org/apple-touch-icon.png"/>
+
+        <link type="image/ico" rel="icon"
+        href="{{ url_for('static',
+              filename='img/favicon.ico')}}" />
+        <meta name="description" content="Truecaller Name Retriever. The simplest method for accessing truecaller's database is through CallerPy's online service. Includes a RESTful API">
+        <meta name="keywords" content="Trucaller,caller id,python,open source,open-source,callerpy,sysbase,mad_dev,amer almadani,ammer almadnai,phone,number,telephone,android,iphone,penbang,penbangproject,penbang project,API,rest,restful api">
+
+        <meta nema='application-name' content="CallerPy">
+
+        <link rel='author' href='https://plus.google.com/+MadDev'/>
+
+        <meta property='og:title' content='CallerPy'/>
+
+        <meta property='og:url' content='http://callerpy.sysbase.org'/>
+
+        <meta property='og:description' content="Truecaller Name Retriever. The simplest method for accessing truecaller's database is through CallerPy's online service. Includes a RESTful API"/>
+
+       <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@penbangproject">
+        <meta name="twitter:title" content="{% block twitter %}{% endblock %}">
+        <meta name="twitter:description" content="Truecaller Name Retriever. The simplest method for accessing truecaller's database is through CallerPy's online service. Includes a RESTful API">
+        <meta name="twitter:creator" content="@penbangproject">
+        <meta name="twitter:image:src" content="http://www.sysbase.org/callerpy/img/callerPy.png">
+
+	</head>
+	<body data-spy="scroll" data-target=".navbar" data-offset='64' onLoad="$.stellar();">
+		<div id="preloader">
+			<div id="status">&nbsp;</div>
+		</div>
+	<!--start navigation-->
+		<div class="navbar navbar-fixed-top" id="navigation">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+					<a href="http://callerpy.sysbase.org" class="brand"><img src="http://www.sysbase.org/callerpy/img/callerPy.png" width='70px' alt=""></a>
+					<div class="nav-collapse collapse">
+						<ul class="nav pull-right">
+							<li><a href="http://callerpy.sysbase.org">CallerPy</a></li>
+							<li><a href="http://callerpy.sysbase.org/form">Search</a></li>
+							<li><a href="http://www.sysbase.org">SYSBASE</a></li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		{% block content %}
+      	{% endblock %}
+
+      	<section id="footer">
+			<div class="container">
+				<div class="row divide">
+	<!--logo and copyright-->
+					<div class="span3">
+						<a href="#" class="brand"><img src="http://www.sysbase.org/callerpy/img/callerPy.png" width='100px' alt=""></a>
+						<p>2014 ©  Inc.</p><br>
+						<p>callerPy is a project <br> by <a href="http://www.sysbase.org" target="_blank">Mad_Dev</a></p><br>
+					</div>
+	<!--footer menu-->
+					<div class="span2 offset4">
+						<ul>
+							<li><h5>Menu</h5></li>
+							<li><a href="http://blog.sysbase.org">Blog</a></li>
+							<li><a href="http://www.sysbase.org">Projects</a></li>
+							<li><a href="http://penbang.sysbase.org">Penbang</a></li>
+						</ul>
+					</div>
+	<!--link to social networks-->
+					<div class="span2 offset1">
+						<ul>
+							<li><h5>Social</h5></li>
+							<li><a href="https://twitter.com/PenbangProject" class="twitter-follow-button" data-show-count="true" data-size="medium">Follow @PenbangProject</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></li>
+							<li><iframe src="http://ghbtns.com/github-btn.html?user=Logic-gate&type=follow"
+  allowtransparency="true" frameborder="0" scrolling="0" width="132" height="20"></iframe></li>
+						</ul>
+					</div>	
+				</div>	
+			</div>
+		</section>
+	<!--latest jQuery-->
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<!--main bootstrap js-->
+	<script type="text/javascript" src="{{ url_for('static',
+              filename='js/bootstrap.min.js')}}"></script> 
+
+	<!--custom js-->
+	<script type="text/javascript" src="{{ url_for('static',
+              filename='js/custom.js')}}"></script> 
+		<!--preloader-->
+		<script type="text/javascript">
+			$(window).load(function() {
+				$("#status").fadeOut();
+				$("#preloader").delay(350).fadeOut("slow");
+			})
+		</script>
+	<!--retina support-->
+	<script type="text/javascript" src="{{ url_for('static',
+              filename='js/retina.js')}}"></script> 
+			<!--smooth scroll on page-->
+		<script type="text/javascript" src="{{ url_for('static',
+              filename='js/jquery.easing-1.3.pack.js')}}"></script> 
+		
+	<!--custom scrollbar-->
+	<script type="text/javascript" src="{{ url_for('static',
+              filename='js/jquery.nicescroll.min.js')}}"></script> 
+			<!--parallax-->
+		<script type="text/javascript" src="{{ url_for('static',
+              filename='js/jquery.stellar.js')}}"></script>
+		<!--contact-->
+		<script type="text/javascript" src="{{ url_for('static',
+              filename='js/jquery.form.js')}}"></script>
+		<!--gallery lightbox-->
+		<script type="text/javascript" src="{{ url_for('static',
+              filename='js/bootstrap-lightbox.min.js')}}"></script>
+	<!--google analytics-->
+			<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-45752225-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</body>
+</html>
+
