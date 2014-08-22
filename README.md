@@ -1,6 +1,5 @@
 callerpy
-========
-[![Build Status](https://travis-ci.org/Logic-gate/callerpy.png?branch=master)](https://travis-ci.org/Logic-gate/callerpy)  
+======== 
 
 **UPDATE MAY_18_2014**  
 A new RESTful online version is available @ http://callerpy.sysbase.org  
