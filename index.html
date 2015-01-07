@@ -1,155 +1,186 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+<html lang="en">
 
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="CallerPy">
+    <meta name="author" content="Mad_Dev">
+
+    <title>CallerPy</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
-    <title>Callerpy by Logic-gate</title>
-  </head>
+</head>
 
-  <body>
-    <header>
-      <div class="inner">
-        <h1>Callerpy</h1>
-        <h2>Truecaller Name Retriever</h2>
-        <a href="https://github.com/Logic-gate/callerpy" class="button"><small>View project on</small>GitHub</a>
-      </div>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                 <!--   <img src='file:///home/mad-dev/projects/CallerPy/New_Logo.png' width='120px'> -->
+                 <p><red>CALLERPY</red></p>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#download">Download</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading"><red>Callerpy</red><p><a href="https://travis-ci.org/Logic-gate/callerpy"><img src="https://travis-ci.org/Logic-gate/callerpy.png?branch=master" alt="Build Status"></a>  </p></h1>
+                        <p class="intro-text">An open source Caller-id API<br></p>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h1>
-<a name="callerpy" class="anchor" href="#callerpy"><span class="octicon octicon-link"></span></a>callerpy</h1>
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>About <red>Callerpy</red></h2>
+                <p style="font-size: 12px; text-align: left">Callerpy started as a simple pastime project. The aim was to develop a wrapper of some-sorts to accommodate CLI call to <a href='http://www.truecaller.com'>Truecaller's</a> DB. Once success bared fruit,<br>moving the project to the web was the next logical step.<br><br>
 
-<p><a href="https://travis-ci.org/Logic-gate/callerpy"><img src="https://travis-ci.org/Logic-gate/callerpy.png?branch=master" alt="Build Status"></a>  </p>
+                At first, I ran the API service and the generic web form. However, The API was put to sleep due to excessive bandwidth charges, and focus was kept on keeping the web form alive and stable.<br><br>
 
-<p>Truecaller Name Retriever.<br>
-Since my request for the API was rejected, I commenced using python parsing libraries.<br>
-Callerpy emulates the process one would encounter if using a web-browser.</p>
+Getting 3000 requests on 12 heroku dynos a day may seem nothing when compared with other well backed services...To me, it's a lot.<br><br>
 
-<hr><p><strong>NEW FEATURE</strong><br>
-Strangely enough, it is not possible to physically enter the country code in <a href="http://www.truecaller.com">www.truecaller.com</a> although defined in <a href="http://www.truecaller.com/javascripts/app.min.1385646302.js">www.truecaller.com/javascripts/app.min.1385646302.js</a><br>
-However, it is possible to do so using callerpy.  </p>
+The new callerpy will focus on RESTful <red>API</red> calls for selective users.<br><br>
+The web form is down for good; those who wish to use the service can get the source-code from GITHUB<br><br></p>
+<p>
+Projects Using <red>CallerPy</red><br>
 
-<hr><h2>
-<a name="todo" class="anchor" href="#todo"><span class="octicon octicon-link"></span></a>TODO</h2>
+<a href='http://penbang.sysbase.org'>Penbang</a><br>
+<a href='https://archassault.org/packages/archassault/any/callerypy-git/files/'>archassault</a>
+</p>
+            </div>
+        </div>
+    </section>
 
-<hr><p>LAST EDIT 2/12/2013</p>
+    <!-- Download Section -->
+    <section id="download" class="content-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2><i style='font-size: 150px' class="fa fa-github-square"></i></h2>
+                    <p>You can <i class="fa fa-git"></i> <red>callerpy</red> for free on GITHUB</p>
+                    <a href="https://github.com/Logic-gate/callerpy" class="btn btn-default btn-lg">Visit GITHUB Page</a><br><br>
+                    
+                    <p>I am still getting a lot of emails requesting help with <red>heroku's</red> setup.<br>Althoug the <a href='https://github.com/Logic-gate/callerpy/tree/web-app'>web-app</a> branch contains everything you'll need, I hope the following helps.</p>
+                    <red>PROCFILE</red><br>
+                    <code><strong>assuming you have newrelic installed</strong></code><br>
+                    <code style='font-size: 10px'>newrelic-admin run-program gunicorn <em>scriptname</em>:app --preload --timeout <strong><var>int</var></strong> --max-request <strong><var>int</var></strong></code><br><br>
+                    <red>PhantomJS buildpack</red><br>
+                    <code style='font-size: 10px'>https://github.com/stomita/heroku-buildpack-phantomjs.git</code>
+                    <br>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
 
-<pre><code>CallerPy v0.2 - TODO
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2><i style='font-size: 150px' class="fa fa-envelope-square"></i></h2>
+                <p>Feel free to email me to request API access, provide me with suggestions, to get the <red>#penbang</red> password, or to just say hello!</p>
+                <p><a href="mailto:mad_dev@linuxmail.org"><red>mad_dev</red><i class="fa fa-at"></i>linuxmail.org</a>
+                </p>
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="https://twitter.com/penbangproject" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Logic-gate" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                    </li>
+                    <li>
+                        <a href="https://kiwiirc.com/client/irc.freenode.net" class="btn btn-default btn-lg"><i class="<i class="fa fa-terminal"></i>"></i> <span class="network-name">Freenode #penbang</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-Defintion: 
+    <!-- Map Section -->
 
-* [IMP]     Important Changes 
-* [ASTH]    Aesthetic Implementations  
-* [FIX]     Fixes to Currant Version  
-* [IMPV]    Improvments
------------------------
-1. [IMPV]   More Login Methods--Facebook, G+, Linkedin  
-2. [IMP]    Automated Name|Number Crawler  
-3. [ASTH]   View in Map * Will handle encoding  
-4. [IMP]    Show all possible names  
-5. [IMP]    Define function to handle arguments
-</code></pre>
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p style='font-size: 10px'><red>callerpy</red> is a Truecaller Name Retriever. It emulates the process one would encounter if using a web-browser.</p><br>
+            <p style='font-size: 10px'><red>callerpy</red> is an open-source project by <red>mad_dev</red>.</p><br>
+        </div>
+    </footer>
 
-<hr><h2>
-<a name="how-to" class="anchor" href="#how-to"><span class="octicon octicon-link"></span></a>How To</h2>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
-<hr><p><strong>CMD</strong></p>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
-<pre><code>python callerpy.py -h
-usage: callerpy.py [-h] [-n number] [-c country] [-cc country code] -l login
-                   [-crawl]
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
 
-TrueCaller Name Retriever
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
 
-optional arguments:
-  -h, --help            show this help message and exit
-  -n number, --number number
-                        Phone Number Without Country Code (default: None)
-  -c country, --country country
-                        Country | String (default: None)
-  -cc country code, --countrycode country code
-                        Country | Int (default: None)
-  -l login, --login login
-                        Login Method | twitter, g+, fb (default: None)
-  -crawl                Automated Crawler | time int (default: None)
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
 
-Do not forget to hardcode your credentials
-</code></pre>
+</body>
 
-<hr><p><strong>RUN</strong></p>
-
-<pre><code>python callerpy.py -n 7349303030 -c us -l twitter  
-</code></pre>
-
-<hr><p><em>OR</em></p>
-
-<pre><code>python callerpy.py -n 7349303030 -cc 1 -l twitter
-</code></pre>
-
-<hr><p><strong>OUTPUT</strong></p>
-
-<pre><code>            {
-name::Dominos Pizzay Quejas
-number::7349303030
-country::us
-}
-{
-name::Pizza Hut Delivery
-number::08447700669
-country::uk
-}
-
-</code></pre>
-
-<p><em>Note</em>: this is an update to the former, or rather the latter method which used the XML format  </p>
-
-<p>To view the log: <em>note the lack of arguments</em></p>
-
-<pre><code>python callerpy.py
-Dominos Pizzay Quejas -- 7349303030 -- us
-Pizza Hut Delivery -- 08447700669 -- uk
-</code></pre>
-        </section>
-
-        <aside id="sidebar">
-          <a href="https://github.com/Logic-gate/callerpy/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/Logic-gate/callerpy/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
-
-          <p class="repo-owner"><a href="https://github.com/Logic-gate/callerpy"></a> is maintained by <a href="https://github.com/Logic-gate">Logic-gate</a>.</p>
-
-          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
-    </div>
-
-            <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-45752225-1");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
-
-  </body>
 </html>
