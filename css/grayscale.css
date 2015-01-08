@@ -36,6 +36,20 @@ h6 {
     letter-spacing: 1px;
 }
 
+code {
+
+    background-color: white;
+    color: black;
+    display:block;
+
+
+}
+
+em, var {
+
+    color: red;
+
+}
 p {
     margin: 0 0 25px;
     font-size: 18px;

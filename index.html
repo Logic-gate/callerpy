@@ -77,7 +77,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading"><red>Callerpy</red><p><a href="https://travis-ci.org/Logic-gate/callerpy"><img src="https://travis-ci.org/Logic-gate/callerpy.png?branch=master" alt="Build Status"></a>  </p></h1>
+                        <h1 class="brand-heading"><red>CallerPy</red><p><a href="https://travis-ci.org/Logic-gate/callerpy"><img src="https://travis-ci.org/Logic-gate/callerpy.png?branch=master" alt="Build Status"></a>  </p></h1>
                         <p class="intro-text">An open source Caller-id API<br></p>
                         <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
@@ -105,7 +105,7 @@ The web form is down for good; those who wish to use the service can get the sou
 Projects Using <red>CallerPy</red><br>
 
 <a href='http://penbang.sysbase.org'>Penbang</a><br>
-<a href='https://archassault.org/packages/archassault/any/callerypy-git/files/'>archassault</a>
+<a href='https://archassault.org/packages/archassault/any/callerypy-git/files/'>ArchAssault</a>
 </p>
             </div>
         </div>
@@ -120,14 +120,30 @@ Projects Using <red>CallerPy</red><br>
                     <p>You can <i class="fa fa-git"></i> <red>callerpy</red> for free on GITHUB</p>
                     <a href="https://github.com/Logic-gate/callerpy" class="btn btn-default btn-lg">Visit GITHUB Page</a><br><br>
                     
-                    <p>I am still getting a lot of emails requesting help with <red>heroku's</red> setup.<br>Althoug the <a href='https://github.com/Logic-gate/callerpy/tree/web-app'>web-app</a> branch contains everything you'll need, I hope the following helps.</p>
-                    <p style="text-align: left"><red>PROCFILE</red> Assuming NewRelic is installed<br>
+                    <p style="font-size: 12px; text-align: left">I am still getting a lot of emails requesting help with <red>heroku's</red> setup.<br>Althoug the <a href='https://github.com/Logic-gate/callerpy/tree/web-app'>web-app</a> branch contains everything you'll need, I hope the following helps.</p>
+                    <p style="font-size: 12px; text-align: left"><red>PROCFILE</red> Assuming NewRelic is installed<br>
                     
                     <code style='font-size: 12px'>newrelic-admin run-program gunicorn <em>scriptname</em>:app --preload --timeout <strong><var>int</var></strong> --max-request <strong><var>int</var></strong></code>
-                    <br>
-                    <red>PhantomJS buildpack</red><br>
-                    <code style='font-size: 12px'>https://github.com/stomita/heroku-buildpack-phantomjs.git</code></p>
-                    <br>
+                    <br><br>
+                    <red>PhantomJS buildpack</red>
+                    <code style='font-size: 12px'>https://github.com/stomita/heroku-buildpack-phantomjs.git</code>
+                    <br><br>
+                    <red>Requirements</red> Not all are needed for a workable app<br>
+                    <code>Flask==0.10.1<br>
+Flask-WTF==0.10.0<br>
+Jinja2==2.7.2<br>
+MarkupSafe==0.23<br>
+WTForms==2.0.1<br>
+Werkzeug==0.9.4<br>
+argparse==1.2.1<br>
+gunicorn==18.0<br>
+itsdangerous==0.24<br>
+newrelic==2.18.1.15<br>
+selenium==2.37.0<br>
+sendgrid==0.5.4<br>
+smtpapi==0.1.2<br>
+unittest2==0.5.1<br>
+wsgiref==0.1.2</code></p>
                     
                 </div>
             </div>
