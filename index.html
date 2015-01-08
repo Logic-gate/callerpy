@@ -30,7 +30,6 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
 </head>
 
@@ -96,7 +95,7 @@
                 <h2>About <red>Callerpy</red></h2>
                 <p style="font-size: 12px; text-align: left">Callerpy started as a simple pastime project. The aim was to develop a wrapper of some-sorts to accommodate CLI call to <a href='http://www.truecaller.com'>Truecaller's</a> DB. Once success bared fruit,<br>moving the project to the web was the next logical step.<br><br>
 
-                At first, I ran the API service and the generic web form. However, The API was put to sleep due to excessive bandwidth charges, and focus was kept on keeping the web form alive and stable.<br><br>
+                At first, I ran the API service and the generic web form. However, the API was put to sleep due to excessive bandwidth charges, and focus was kept on keeping the web form alive and stable.<br><br>
 
 Getting 3000 requests on 12 heroku dynos a day may seem nothing when compared with other well backed services...To me, it's a lot.<br><br>
 
@@ -122,11 +121,12 @@ Projects Using <red>CallerPy</red><br>
                     <a href="https://github.com/Logic-gate/callerpy" class="btn btn-default btn-lg">Visit GITHUB Page</a><br><br>
                     
                     <p>I am still getting a lot of emails requesting help with <red>heroku's</red> setup.<br>Althoug the <a href='https://github.com/Logic-gate/callerpy/tree/web-app'>web-app</a> branch contains everything you'll need, I hope the following helps.</p>
-                    <red>PROCFILE</red><br>
-                    <code><strong>assuming you have newrelic installed</strong></code><br>
-                    <code style='font-size: 10px'>newrelic-admin run-program gunicorn <em>scriptname</em>:app --preload --timeout <strong><var>int</var></strong> --max-request <strong><var>int</var></strong></code><br><br>
+                    <p style="text-align: left"><red>PROCFILE</red> Assuming NewRelic is installed<br>
+                    
+                    <code style='font-size: 12px'>newrelic-admin run-program gunicorn <em>scriptname</em>:app --preload --timeout <strong><var>int</var></strong> --max-request <strong><var>int</var></strong></code>
+                    <br>
                     <red>PhantomJS buildpack</red><br>
-                    <code style='font-size: 10px'>https://github.com/stomita/heroku-buildpack-phantomjs.git</code>
+                    <code style='font-size: 12px'>https://github.com/stomita/heroku-buildpack-phantomjs.git</code></p>
                     <br>
                     
                 </div>
@@ -150,7 +150,7 @@ Projects Using <red>CallerPy</red><br>
                         <a href="https://github.com/Logic-gate" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
                     </li>
                     <li>
-                        <a href="https://kiwiirc.com/client/irc.freenode.net" class="btn btn-default btn-lg"><i class="<i class="fa fa-terminal"></i>"></i> <span class="network-name">Freenode #penbang</span></a>
+                        <a href="https://kiwiirc.com/client/irc.freenode.net" class="btn btn-default btn-lg"><i class="<i class="fa fa-terminal"></i>"></i> <span class="network-name">#penbang</span></a>
                     </li>
                 </ul>
             </div>
